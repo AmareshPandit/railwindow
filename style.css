@@ -1,0 +1,98 @@
+:root {
+    --primary: #6366f1;
+    --secondary: #a855f7;
+    --accent: #00ffcc;
+    --glass: rgba(255, 255, 255, 0.12);
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px; /* Space for mobile */
+    box-sizing: border-box;
+}
+
+.bg-animate {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 15% 25%, #4338ca 0%, transparent 35%),
+                radial-gradient(circle at 85% 75%, #7e22ce 0%, transparent 35%);
+    z-index: -1;
+    filter: blur(70px);
+}
+
+.glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 2rem;
+    border-radius: 28px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+h1 { font-size: clamp(1.8rem, 5vw, 2.4rem); margin-bottom: 5px; }
+.accent-text { color: var(--secondary); }
+.subtitle { color: #94a3b8; font-size: 0.8rem; margin-bottom: 1.5rem; }
+
+.big-time { font-size: clamp(2.2rem, 8vw, 3rem); font-weight: 800; color: var(--accent); }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive Grid for small phones */
+@media (max-width: 400px) {
+    .stats-grid { grid-template-columns: 1fr; }
+    .glass-card { padding: 1.5rem; }
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 15px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-card.active {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.date-input {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-family: inherit;
+    font-size: 0.9rem;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.date-val { font-weight: 700; font-size: 1.1rem; }
+
+.status-msg {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px dashed rgba(34, 197, 94, 0.4);
+    padding: 15px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 12px;
+}

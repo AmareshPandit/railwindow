@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="title" content="RailWindow | IRCTC 60-Day Booking Date Calculator">
+    <meta name="description" content="Calculate your IRCTC train booking date easily. Find out exactly when the 60-day Advance Reservation Period (ARP) opens for your journey at 8:00 AM.">
+    <meta name="keywords" content="IRCTC booking date, train ticket opening date, 60 day ARP calculator, Indian Railways booking window, RailWindow, train reservation date">
+    <meta name="author" content="RailWindow">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.railwindow.in/">
+    <meta property="og:title" content="RailWindow | 60-Day Train Booking Calculator">
+    <meta property="og:description" content="Don't miss your train ticket! Check exactly when your IRCTC booking opens with our smart 60-day window tool.">
+    <meta property="og:image" content="https://www.railwindow.in/assets/preview-image.png">
+    <title>RailWindow</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- this website can be used for calculating date booking of irctc -->
+    <div class="bg-animate"></div>
+
+    <div class="glass-card">
+        <header>
+            <h1>Rail<span class="accent-text">Window</span></h1>
+            <p class="subtitle">Official IRCTC 60-Day ARP Logic</p>
+        </header>
+
+        <div class="time-box">
+            <span class="time-label">Booking Window Opens At</span>
+            <div class="big-time">08:00 AM</div>
+            <span class="timezone">Indian Standard Time (IST)</span>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="label">Set "Today's" Date</span>
+                <input type="date" id="input-today" class="date-input">
+            </div>
+            <div class="stat-card active">
+                <span class="label">Bookings Open For</span>
+                <span id="display-booking" class="date-val">-- --- ----</span>
+            </div>
+        </div>
+
+        <div class="status-msg">
+            <div class="icon-circle">✓</div>
+            <div class="status-content">
+                <h4>Calculation Accurate</h4>
+                <p id="helper-text">Select a date to see the 60-day window.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
